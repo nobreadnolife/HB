@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>棒棒撒专属封面</title>
     <style>
-        /* 全局样式 */
+        /* 全局样式，设置背景图片 */
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f3f3f3, #e0e0e0);
-            text-align: center;
-            padding: 50px;
+            background: url('background.jpg') no-repeat center center fixed; /* 替换成你的背景图文件名 */
+            background-size: cover;
+            position: relative;
         }
+      
 
         /* 容器样式 */
         .container {
@@ -20,12 +21,16 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin: auto;
+            margin: 100px auto;
+            text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
         /* 标题样式 */
         h2 {
             color: #333;
+            font-size: 22px;
         }
 
         /* 输入框样式 */
@@ -75,8 +80,8 @@
             var userInput = document.getElementById("inputNumber").value;
             var validNumbers = ["1299", "2199"];
             if (validNumbers.includes(userInput)) {
-                document.getElementById("result").innerText = "红包序列号：NU_eZ19LeyBk7G";
-                document.getElementById("result").style.color = "green";
+                document.getElementById("result").innerText = "封面序列号：NU_s8libhlxK1H";
+                document.getElementById("result").style.color = "#e5b549";
             } else {
                 document.getElementById("result").innerText = "无效输入，请输入 1299 或 2199";
                 document.getElementById("result").style.color = "red";
@@ -87,8 +92,8 @@
 <body>
 
     <div class="container">
-        <h2>棒棒撒新年快乐🍞❤🍞<h2>
-        <input type="text" id="inputNumber" placeholder="请输入 1299 或 2199">
+        <h2>棒棒撒新年快乐🍞💖🍞</h2>
+        <input type="text" id="inputNumber" placeholder="输入 1299 或 2199">
         <br>
         <button onclick="checkNumber()">提交</button>
         <p id="result"></p>
