@@ -1,40 +1,103 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2566">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>棒棒撒专属封面</title>
+    <style>
+        /* 全局样式，设置背景图片 */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed; /* 替换成你的背景图文件名 */
+            background-size: cover;
+            position: relative;
+        }
+      
+
+        /* 容器样式 */
+        .container {
+            background: white;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 100px auto;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* 标题样式 */
+        h2 {
+            color: #333;
+            font-size: 22px;
+        }
+
+        /* 输入框样式 */
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* 按钮样式 */
+        button {
+            background: #e5b549;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* 按钮悬停效果 */
+        button:hover {
+            background: #e5b549;
+        }
+
+        /* 结果文字样式 */
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 响应式优化 */
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+    <script>
+        function checkNumber() {
+            var userInput = document.getElementById("inputNumber").value;
+            var validNumbers = ["1299", "2199"];
+            if (validNumbers.includes(userInput)) {
+                document.getElementById("result").innerText = "封面序列号：NU_mXwv3b2eOMB";
+                document.getElementById("result").style.color = "#e5b549";
+            } else {
+                document.getElementById("result").innerText = "无效输入，请输入 1299 或 2199";
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="zh"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;序列号生成器&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function checkNumber() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var userInput = document.getElementById("inputNumber").value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>var validNumbers = ["1299", "2199"];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (validNumbers.includes(userInput)) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById("result").innerText = "您的序列号是：NU_mXwv3b2eOMB";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById("result").innerText = "无效输入，请输入 1299 或 2199";</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;请输入您的编号&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="inputNumber" placeholder="输入 1299 或 2199"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="checkNumber()"&gt;提交&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p id="result"&gt;&lt;/p&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+    <div class="container">
+        <h2>棒棒撒新年快乐🍞💖🍞</h2>
+        <input type="text" id="inputNumber" placeholder="输入 1299 或 2199">
+        <br>
+        <button onclick="checkNumber()">提交</button>
+        <p id="result"></p>
+    </div>
+
 </body>
 </html>
