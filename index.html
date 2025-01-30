@@ -78,12 +78,12 @@
     <script>
         function checkNumber() {
             var userInput = document.getElementById("inputNumber").value;
-            var validNumbers = ["1299", "2199", "12199"];
+            var validNumbers = ["1299", "2199"];
             if (validNumbers.includes(userInput)) {
-                document.getElementById("result").innerText = "封面序列号：NU_s8libhlxK1H";
+                document.getElementById("result").innerText = "封面序列号：NU_npnKNVEGpdY";
                 document.getElementById("result").style.color = "#e5b549";
             } else {
-                document.getElementById("result").innerText = "无效输入，请输入 1299 或 2199 或 12199";
+                document.getElementById("result").innerText = "无效输入，请输入 1299 或 2199";
                 document.getElementById("result").style.color = "red";
             }
         }
@@ -93,7 +93,7 @@
 
     <div class="container">
         <h2>棒棒撒新年快乐🍞💖🍞</h2>
-        <input type="text" id="inputNumber" placeholder="输入 1299 或 2199">
+        <input type="text" id="inputNumber" placeholder="输入 1299 或 2199 ">
         <br>
         <button onclick="checkNumber()">提交</button>
         <p id="result"></p>
